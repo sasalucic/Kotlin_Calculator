@@ -1,5 +1,5 @@
 # Kotlin_Calculator
-# Calculator App (KalkulatorV1)
+# Calculator App
 
 This is a simple calculator app developed using Android and Kotlin. The app allows users to perform basic mathematical calculations such as addition, subtraction, multiplication, division, and more. It also includes advanced features like calculating square roots, percentages, powers, trigonometric functions, logarithms, and factorials.
 
