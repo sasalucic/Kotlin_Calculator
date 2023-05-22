@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorWhite">#F0EDEE</color>
+    <color name="background">#000814</color>
+    <color name="operators">#003566</color>
+    <color name="delete">#FFD60A</color>
+    <color name="onClick">#F0EDEE</color>
+    <color name="numbers">#8B939C</color>
+    <color name="colorBlack">#000814</color>
+</resources>

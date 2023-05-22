@@ -1,0 +1,519 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="2"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvInput"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:ellipsize="start"
+                android:gravity="end"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="30sp"
+                app:layout_constraintBottom_toTopOf="@+id/tvOutput"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry,VisualLintOverlap"
+                tools:text="ulaz"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"/>
+
+            <TextView
+                android:id="@+id/tvOutput"
+                android:layout_width="match_parent"
+                android:layout_marginEnd="30dp"
+                android:layout_marginStart="30dp"
+                android:layout_height="100dp"
+                android:ellipsize="start"
+                android:gravity="end"
+                android:singleLine="true"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:textSize="60sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvInput"
+                tools:ignore="RtlSymmetry,TextSizeCheck,VisualLintOverlap"
+                tools:text="izlaz"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.2"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <Button
+                android:id="@+id/btnModeChange"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="40dp"
+                android:background="@drawable/baseline_screen_rotation_24"
+                android:contentDescription="@string/rotate"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="8" />
+
+            <Button
+                android:id="@+id/btnBackspace"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/backspace"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:contentDescription="Backspace"
+                android:fontFamily="sans-serif-black"
+                android:gravity="end"
+                android:stateListAnimator="@null"
+                android:textColor="@color/colorWhite"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText,TouchTargetSizeCheck" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/numbers"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp">
+
+            <Button
+                android:id="@+id/btnClear"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/delete_and_brackets"
+                android:contentDescription="Delete all"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="C"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnLeftB"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/operators"
+                android:contentDescription="Left bracket"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="("
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnRightB"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/operators"
+                android:contentDescription="Right bracket"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text=")"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnDivide"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/operators"
+                android:contentDescription="Divide"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="/"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp">
+
+            <Button
+                android:id="@+id/btnSeven"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/numbers_buttons"
+                android:contentDescription="Seven"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="7"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnEight"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/numbers_buttons"
+                android:contentDescription="Eight"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="8"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnNine"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/numbers_buttons"
+                android:contentDescription="Nine"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="9"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnMultiply"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/operators"
+                android:contentDescription="Multiply"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="*"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp">
+
+            <Button
+                android:id="@+id/btnFour"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/numbers_buttons"
+                android:contentDescription="Four"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="4"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnFive"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/numbers_buttons"
+                android:contentDescription="Five"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="5"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnSix"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/numbers_buttons"
+                android:contentDescription="Six"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="6"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnMinus"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/operators"
+                android:contentDescription="Minus"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="-"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp">
+
+            <Button
+                android:id="@+id/btnOne"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/numbers_buttons"
+                android:contentDescription="One"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnTwo"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/numbers_buttons"
+                android:contentDescription="Two"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="2"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnThree"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/numbers_buttons"
+                android:contentDescription="Three"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="3"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnPlus"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/operators"
+                android:contentDescription="Plus"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="+"
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp">
+
+            <Button
+                android:id="@+id/btnZero"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/numbers_buttons"
+                android:contentDescription="Zero"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnDot"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/numbers_buttons"
+                android:contentDescription="Point"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="."
+                android:textAlignment="center"
+                android:textColor="@color/background"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+            <Button
+                android:id="@+id/btnEquals"
+                style="?android:attr/buttonBarButtonStyle"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/operators"
+                android:contentDescription="Equals"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:stateListAnimator="@null"
+                android:text="="
+                android:textAlignment="center"
+                android:textColor="@color/colorWhite"
+                android:textSize="34sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
