@@ -60,19 +60,4 @@ The main components of the app are:
 - `activity_main.xml`: The layout file for the main activity in portrait orientation.
 - `activity_main_land.xml`: The layout file for the main activity in landscape orientation.
 
-## Contributing
 
-Contributions to the calculator app are welcome. If you would like to contribute, please follow these steps:
-
-1. Fork the repository.
-2. Create a new branch: `git checkout -b feature/your-feature`
-3. Make your changes and test them thoroughly.
-4. Push your changes to your forked repository.
-5. Submit a pull request describing your changes.
-
-
-## Contact
-
-If you have any questions or suggestions regarding the calculator app, please contact [email protected].
-
-Thank you for using the Calculator App!
